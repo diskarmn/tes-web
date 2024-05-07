@@ -1,4 +1,35 @@
  ## tes
+
+ utuk menjalankan aplikasi ini setelah clone dari link reposiroty diperlukan menginstal composer dahulu
+ dengan perintah ( composer install  )
+ setelah itu buat file baru dengan nama .env , lalu copas semua kode didalam file .enx.example ,
+ pada bagian 
+ DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=laravel
+# DB_USERNAME=root
+# DB_PASSWORD=
+
+ubah menjadi 
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tesweb
+DB_USERNAME=root
+DB_PASSWORD=
+
+jangan lupa untuk php artisan migrate 
+dan jalankan beberapa perintah untuk mengisi data dari seeder
+
+
+-JenisKelaminSeeder     php artisan db:seed --class=JenisKelaminSeeder   
+-TabelProfesiSeeder     php artisan db:seed --class=TabelProfesiSeeder
+-TabelSatuanBarangSeeder    php artisan db:seed --class=TabelSatuanBarangSeeder  
+-TabelKategoriBarangSeeder  php artisan db:seed --class=TabelKategoriBarangSeeder
+
+
 pad tes ini saya menggunakan framework untuk front end ederhana bootstrap dan aos,
 untuk alur aplikasi 
 ketika pergi ke halaman home tapi belum login maka akan diarahkan ke halaman login
@@ -12,20 +43,8 @@ valu kolom yang diperintahkan, pada inputan saya menamilkan text berupa nama nam
 untuk menjalankan data seeder terdapat beberapa file yang perlu dijalankan
 
  
--JenisKelaminSeeder     php artisan db:seed --class=JenisKelaminSeeder   
--TabelProfesiSeeder     php artisan db:seed --class=TabelProfesiSeeder
--TabelSatuanBarangSeeder    php artisan db:seed --class=TabelSatuanBarangSeeder  
--TabelKategoriBarangSeeder  php artisan db:seed --class=TabelKategoriBarangSeeder
 
-untuk nama database di .env bisa dibuah menjadi ini
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=tesweb
-DB_USERNAME=root
-DB_PASSWORD=
- 
  
  
  
